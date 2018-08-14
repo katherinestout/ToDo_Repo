@@ -3,7 +3,9 @@
 //Check off specific todos by clicking on them
 
 $(document).ready(function(){
-    $("li").click(function(){
+
+//when an li is clicked inside the ul, run this code
+    $("ul").on("click", "li", function(){
         $(this).toggleClass("completed");
     });
        // alert("connected");
@@ -40,16 +42,27 @@ $("span").click(function(){
 
 
 //click on x to delete todo
-$("span").click(function(event){
+$("ul").on("click", "span", function(event){
     $(this).parent().fadeOut(500, function(){
         //gets li
         //remove li
         $(this).remove();
         //these two this dont refer to the same 
     });
-    event.stopPropogation();
+  
 });
+$("input[type= 'text'").keypress(function(event){
+    if(event.which === 13){
+        //which refers to the character code of the key
 
+        //grabbing a new todo text from input
+        var todoText = $(this).val();
+        //clear out input
+        $(this).val("");
+        //create a new li and add(append) to ul
+        $("ul").append("<li><span>X</span>" + todoText + "</li>")
+    }
+});
 
 
 });
