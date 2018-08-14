@@ -29,4 +29,27 @@ $(document).ready(function(){
         });
     }
     });*/
+
+    //Click on X to delete todo - - - - -
+    /*
+$("span").click(function(){
+    alert("clicked on a span");
+
+});
+*/
+
+
+//click on x to delete todo
+$("span").click(function(event){
+    $(this).parent().fadeOut(500, function(){
+        //gets li
+        //remove li
+        $(this).remove();
+        //these two this dont refer to the same 
+    });
+    event.stopPropogation();
+});
+
+
+
 });
