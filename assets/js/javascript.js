@@ -4,6 +4,8 @@
 
 $(document).ready(function(){
     $("li").click(function(){
+        $(this).toggleClass("completed");
+    });
        // alert("connected");
        
        //$(this).css("color", "gray");
@@ -12,10 +14,8 @@ $(document).ready(function(){
         //if li is gray, turn it black
         //else turn it gray
 
-        if($(this).css("color") === "rgb(128, 128, 128)"){
-           // console.log("its gray!")}
-
-
+               /*  if($(this).css("color") === "rgb(128, 128, 128)"){
+         
             $(this).css({
                 color:"black",
                 textDecoration: "none"
@@ -23,13 +23,10 @@ $(document).ready(function(){
         }
         
     else {
-
         $(this).css({
             color:"gray",
             textDecoration: "line-through"
         });
-
     }
-     
-    });
+    });*/
 });
