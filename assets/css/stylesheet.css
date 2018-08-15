@@ -1,6 +1,10 @@
 body{
     font-family: 'Roboto Condensed', sans-serif;
+    background: red; /* For browsers that do not support gradients */
+    background: linear-gradient(to right, lightgreen , lightyellow); /* Standard syntax (must be last) */
 }
+
+
 
 h1{
     background: lightgreen;
@@ -84,4 +88,14 @@ input:focus{
 
 .fa-plus{
     float:right;
+}
+
+.footer{
+ bottom: 0;
+ left: 0;
+width: 100%;
+ position: fixed;
+ text-align: center;
+ background-color: whitesmoke;
+ color: gray;
 }
